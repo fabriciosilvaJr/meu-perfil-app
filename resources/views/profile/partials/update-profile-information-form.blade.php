@@ -47,6 +47,13 @@
             @endif
         </div>
 
+        <div>
+            <x-input-label for="about_me" :value="__('About Me')" />
+            <textarea id="about_me" name="about_me" class="mt-1 block w-full" :value="old('about_me', $user->about_me)" autocomplete="about_me">{{ old('about_me', $user->about_me) }}</textarea>
+
+            <x-input-error class="mt-2" :messages="$errors->get('about_me')" />
+        </div>
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
