@@ -17,7 +17,7 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['string', 'max:255'],
-            'email' => ['email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+            'email' => ['email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id), 'regex:/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/'],
             'about_me' => 'nullable|string',
             'image_url' =>  'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
             'facebook_link' => ['nullable', 'string', 'url', 'regex:/^https:\/\/www\.facebook\.com\/[a-zA-Z0-9.-]+\/?$/'],
