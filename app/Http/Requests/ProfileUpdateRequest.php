@@ -20,7 +20,7 @@ class ProfileUpdateRequest extends FormRequest
             'email' => ['email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
             'about_me' => 'nullable|string',
             'image_url' =>  'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
-            'facebook_link' => ['nullable', 'url'],
+            'facebook_link' => ['nullable', 'string', 'url', 'regex:/^https:\/\/www\.facebook\.com\/[a-zA-Z0-9.-]+\/?$/'],
             'twitter_link' => ['nullable', 'url'],
             'linkedin_link' => ['nullable', 'string', 'regex:/^(https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9-]+)\/?$/'],
 
