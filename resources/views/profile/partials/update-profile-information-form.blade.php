@@ -16,7 +16,7 @@
     <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6"  enctype="multipart/form-data">
         @csrf
         @method('patch')
-        @if ($user->image_url)
+    @if ($user->image_url)
         <div>
             <img src="{{asset($user->image_url)}}" alt="Foto de Perfil" class="mt-1" style="max-width: 200px;" />
         </div>
@@ -66,6 +66,24 @@
 
             <x-input-error class="mt-2" :messages="$errors->get('about_me')" />
         </div>
+        <div>
+    <x-input-label for="facebook_link" :value="__('Facebook')" />
+    <x-text-input id="facebook_link" name="facebook_link" type="text" class="mt-1 block w-full" :value="old('facebook_link', $user->facebook_link)" />
+    <x-input-error class="mt-2" :messages="$errors->get('facebook_link')" />
+</div>
+
+<div>
+    <x-input-label for="twitter_link" :value="__('Twitter')" />
+    <x-text-input id="twitter_link" name="twitter_link" type="text" class="mt-1 block w-full" :value="old('twitter_link', $user->twitter_link)" />
+    <x-input-error class="mt-2" :messages="$errors->get('twitter_link')" />
+</div>
+
+<div>
+    <x-input-label for="linkedin_link" :value="__('LinkedIn')" />
+    <x-text-input id="linkedin_link" name="linkedin_link" type="text" class="mt-1 block w-full" :value="old('linkedin_link', $user->linkedin_link)" />
+    <x-input-error class="mt-2" :messages="$errors->get('linkedin_link')" />
+</div>
+
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>

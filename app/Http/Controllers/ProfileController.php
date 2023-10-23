@@ -33,36 +33,24 @@ class ProfileController extends Controller
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
-        // if ($request->hasFile('image_url')) {
-        //     $photo = $request->file('image_url');
-        //     $image = Image::make($photo);
-        //     $image->resize(200, 200); 
-    
-        //     $photoData = (string) $image->encode('data-url');
-            
-        //     $request->user()->image_url = $photoData;
-    
-        // }
 
         if ($request->hasFile('image_url')) {
             $user = $request->user();
             $image = $request->file('image_url');
             $filename = time().'.'.$image->getClientOriginalExtension();
             $path = public_path('uploads/' . $filename);
-    
-            // Redimensionar e recortar a imagem para o tamanho desejado (ajuste conforme necessário)
             $imagemRedimensionada = Image::make($image)->fit(200, 200);
             $imagemRedimensionada->save($path);
     
             $user->image_url = 'uploads/' . $filename;
     
         }
+
+        $request->user()->facebook_link = $request->input('facebook_link');
+        $request->user()->twitter_link = $request->input('twitter_link');
+        $request->user()->linkedin_link = $request->input('linkedin_link');
         
         
-        
-        
-    
-    
 
         $request->user()->save();
 
