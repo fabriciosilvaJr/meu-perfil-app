@@ -22,7 +22,8 @@ class ProfileUpdateRequest extends FormRequest
             'image_url' =>  'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
             'facebook_link' => ['nullable', 'url'],
             'twitter_link' => ['nullable', 'url'],
-            'linkedin_link' => ['nullable', 'url'],
+            'linkedin_link' => ['nullable', 'string', 'regex:/^(https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9-]+)\/?$/'],
+
 
 
 
