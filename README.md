@@ -2,7 +2,8 @@
 
 Bem-vindo ao Meu Perfil App, uma aplicação Laravel 10 que permite aprimorar seu perfil. Siga as instruções abaixo para configurar e executar o aplicativo.
 
-![image](https://github.com/fabriciosilvaJr/meu-perfil-app/assets/17913188/62c7f75a-e3bc-46e7-8d69-023f283c410c)
+![image](https://github.com/fabriciosilvaJr/meu-perfil-app/assets/17913188/85ea9a99-b919-4615-b02f-06a352383416)
+
 
 
 
