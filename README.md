@@ -43,7 +43,8 @@ Certifique-se de que você possui as seguintes dependências instaladas:
 11. Compile os ativos do aplicativo:
     `npm run build`
     
-##Executando o Aplicativo
+## Executando o Aplicativo
+
 Agora que o aplicativo está configurado, você pode executá-lo com o seguinte comando:
 `php artisan serve`
 
