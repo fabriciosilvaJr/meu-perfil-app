@@ -52,8 +52,6 @@ O aplicativo estará disponível em http://localhost:8000.
 
 Lembre-se de que estas são instruções básicas para configurar e executar o aplicativo. Dependendo das necessidades do seu projeto, você pode precisar fazer ajustes adicionais. Certifique-se de consultar a documentação do Laravel e do Breeze para obter mais informações.
 
-Divirta-se usando o Meu Perfil App!
-
 
 
 
