@@ -24,7 +24,7 @@ Certifique-se de que você possui as seguintes dependências instaladas:
    `mv .env.example .env`
 
 4. Instale as dependências do Composer:
-   `composer install'
+   `composer install`
 
 5. Abra o arquivo php.ini e certifique-se de que as extensões pdo_pgsql e gd estão descomentadas (sem ponto e vírgula no início da linha). Isso é importante para o funcionamento correto do aplicativo.
 
